@@ -6,7 +6,7 @@ const geoUrl="https://api.mapbox.com/geocoding/v5/mapbox.places/"+address+".json
     request({url:geoUrl , json:true },(error,response)=>{
 
 if (error) {
-    callback=("ERROR INTERNET OR OTHER",undefined)
+    callback("ERROR INTERNET OR OTHER",undefined)
 }
 else if (response.body.message) {
     callback("Not Authorized - Invalid Token",undefined)
